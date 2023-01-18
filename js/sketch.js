@@ -25,8 +25,8 @@ function setup() {
     canvas.parent("p5container");
 
     //load the images
-    img = loadImage('assets/keyboardKeyBlue.PNG'); 
-    img2 = loadImage('assets/cityscape.png');
+    img = loadImage('assets/keyboardKeyPurple.PNG'); 
+    img2 = loadImage('assets/cityscapePurple.png');
     
     polySynth = new p5.PolySynth();
 }
@@ -42,7 +42,7 @@ function playSynth(note){
 }
 
 function draw() {
-    background(184, 217, 244);
+    background(125, 14, 126);
 
     circleSize += 10;
     noFill();
@@ -54,7 +54,7 @@ function draw() {
     circle(circleX, circleY, circleSize * .5);
     circle(circleX, circleY, circleSize * .25);
 
-    image(img, windowWidth/2-258.5, 0, img.width, img.height); //top of the screen in the centre
+    image(img, windowWidth/2-256.5, 0, img.width, img.height); //top of the screen in the centre
     image(img2, 0, 0, img2.width+250, img2.height); //bottom of the screen, stretched a bit so it fits in the canvas
 }
 
@@ -76,68 +76,68 @@ function keyTyped(){
    //adding the white keys
     if (key === 'a') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450)); //so the fireworks don't appear in the 'water'
         circleSize = 0;
         playSynth('C4');
     } else if (key === 's') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('D4');
     } else if (key === 'd') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('E4');
     } else if (key === 'f') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('F4');
     } else if (key === 'g') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('G4');
     } else if (key === 'h') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('A5');
     } else if (key === 'j') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('B5');
     } else if (key === 'k') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('C5');
     //adding the black keys (e.g. Db)
     } else if (key === 'w') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('Db4');
     } else if (key === 'e') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('Eb4');
     } else if (key === 't') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('Gb4');
     } else if (key === 'y') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('Ab5');
     } else if (key === 'u') {
         circleX = random(windowWidth);
-        circleY = random(windowHeight-100);
+        circleY = random((windowHeight-100)-(windowHeight-450));
         circleSize = 0;
         playSynth('Bb5');
     } 
